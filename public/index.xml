@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yet Another DIY Raspberry Pi Cluster</title>
+    <link>https://zemm.github.io/katiska/</link>
+    <description>Recent content on Yet Another DIY Raspberry Pi Cluster</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Tue, 18 Aug 2015 18:17:02 +0300</lastBuildDate>
+    <atom:link href="https://zemm.github.io/katiska/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>(Ir)Rationale and blah blah blah</title>
+      <link>https://zemm.github.io/katiska/00-irrationale-and-blah-blah-blah/</link>
+      <pubDate>Tue, 18 Aug 2015 18:17:02 +0300</pubDate>
+      
+      <guid>https://zemm.github.io/katiska/00-irrationale-and-blah-blah-blah/</guid>
+      <description>
+
+&lt;h2 id=&#34;warning:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Warning&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;This useless wall of text is really just to keep my focus on the project, and to document it for my later self (hi older me!). This is not a tutorial of any kind, It&amp;rsquo;s not meant to be useful, and the project will propably not even succeed. TL;DR is adviced.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;why-build-a-cluster:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Why build a cluster?&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Because of reasons!&lt;/li&gt;
+&lt;li&gt;Because &lt;del&gt;I can&lt;/del&gt; can I?&lt;/li&gt;
+&lt;li&gt;Just because.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Now I don&amp;rsquo;t really have any burning needs for a cluster. However, I do like to tinker with one. Being a software developer these days is more than likely to include The Internets and networked applications in some form or another. Along with the current &amp;ldquo;full stack&amp;rdquo; trends, I also happen to have an interest in the Ops-side of things, and prefer to rule my own platforms.&lt;/p&gt;
+
+&lt;p&gt;Some of my daily work as a software designer and eveningly work as a procrastinating paralysis by analysis -affected wannabe nerd has included the Ops-side of things such as &lt;a href=&#34;https://puppetlabs.com/&#34;&gt;provisioning&lt;/a&gt; of &lt;a href=&#34;https://en.wikipedia.org/wiki/LAMP_%28software_bundle%29&#34;&gt;web servers&lt;/a&gt;, &lt;a href=&#34;http://www.ansible.com/home&#34;&gt;automation&lt;/a&gt; and &lt;a href=&#34;http://saltstack.com/&#34;&gt;orchestration&lt;/a&gt; of more &lt;a href=&#34;https://www.docker.com/&#34;&gt;dynamic&lt;/a&gt; &lt;a href=&#34;http://www.freedesktop.org/wiki/Software/systemd/&#34;&gt;DIY-ish&lt;/a&gt; environments, and lately drifting towards &lt;a href=&#34;http://kubernetes.io/&#34;&gt;more&lt;/a&gt; &lt;a href=&#34;https://coreos.com/&#34;&gt;complete&lt;/a&gt; &lt;a href=&#34;http://mesos.apache.org/&#34;&gt;solutions&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Why not try out these things in a &amp;ldquo;real&amp;rdquo; environment instead of the plain old &lt;a href=&#34;https://www.vagrantup.com/&#34;&gt;Vagrant&lt;/a&gt; clusters? You could play with &lt;a href=&#34;http://cassandra.apache.org/&#34;&gt;distributed&lt;/a&gt; &lt;a href=&#34;http://ceph.com/&#34;&gt;storages&lt;/a&gt;. And it might not be a bad idea to dapple with that &lt;a href=&#34;http://spark.apache.org/&#34;&gt;big&lt;/a&gt; &lt;a href=&#34;https://hadoop.apache.org/&#34;&gt;data&lt;/a&gt; thing while at it.&lt;/p&gt;
+
+&lt;p&gt;Mainly it&amp;rsquo;s just for fun, show-off and shiny LEDs with a TFT-dashboard!&lt;/p&gt;
+
+&lt;h2 id=&#34;initial-hardware-plans:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Initial Hardware plans&lt;/h2&gt;
+
+&lt;p&gt;Most of the stuff will be planned as I go. This will lead to failures and unnecessary money burned.&lt;/p&gt;
+
+&lt;h3 id=&#34;parts-ordered:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Parts ordered&lt;/h3&gt;
+
+&lt;p&gt;At the time of writing, I&amp;rsquo;ve ordered an initial bunch of stuff
+that I have carefully (not) calculated to be needed. Such items
+include:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;6x&lt;/strong&gt; &lt;a href=&#34;https://www.raspberrypi.org/products/raspberry-pi-2-model-b/&#34;&gt;Raspberry Pi 2 Model B&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;The more the merrier, when the intention is to play with failovers, balancing and HA-stuff&lt;/li&gt;
+&lt;li&gt;Non-masterless setups take 1 to 3 nodes just to control the cluster, which leaves just the bare minimum of 3 slaves&lt;/li&gt;
+&lt;li&gt;Six was the most I really dared without a real need as a justification&lt;/li&gt;
+&lt;li&gt;For the initial plan I had just an 8-port switch&lt;/li&gt;
+&lt;li&gt;Will keep the possible future expansion in mind when building&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;6x&lt;/strong&gt; &lt;a href=&#34;http://www.samsung.com/us/computer/memory-storage-accessories/MB-MG16DA/AM&#34;&gt;Samsung MicroSDHC 16GB PRO&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.corsair.com/en/cx-series-cx430m-modular-atx-power-supply-430-watt-80-plus-bronze-certified-modular-psu&#34;&gt;Corsair CX Series™ Modular CX430M ATX Power Supply&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Modularity was desired, planning to build my own cables straight from the source without adapters&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zemm.github.io/katiska/img/00/rpi2s.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/rpi2s_thumb.jpg&#34; alt=&#34;rpi2s&#34; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;15x&lt;/strong&gt; 50cm Cat5e (red, orange, purple) cables&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Couldn&amp;rsquo;t find a full rainbow suite of cables at a reasonable price :(, so I opted for a somewhat coherent color pattern (at least tried)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;8x&lt;/strong&gt; &lt;a href=&#34;http://www.dx.com/p/bolongking-usb-male-to-micro-usb-female-charging-cable-orange-105cm-199712&#34;&gt;USB Male to Micro USB Male Charging Cable - Orange&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Orange is a nice color&lt;/li&gt;
+&lt;li&gt;One review said these can transfer over 1A&lt;/li&gt;
+&lt;li&gt;However, I don&amp;rsquo;t really need these, since I changed my mind after ordering (using diy molex-usb -cables)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;strong&gt;10x&lt;/strong&gt; Straight Micro USB Male Plug Socket Connectors, &lt;strong&gt;10x&lt;/strong&gt; Right Angle Micro USB Male Plug Socket Connectors&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Because you might need these in some unexpected situation in the future! (=hoarding)&lt;/li&gt;
+&lt;li&gt;Because why plan to determine which style suits better, when you can experiment (=lazyness, hoarding)&lt;/li&gt;
+&lt;li&gt;I really lack at planning&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://eud.dx.com/product/gl-inet-wi-fi-router-openwrt-ssh-usb-64mbyte-ram-wireless-repeater-pcb-board-green-844346531&#34;&gt;OpenWrt capable board thingy&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Planning to use for dhcp and routing&lt;/li&gt;
+&lt;li&gt;Will have cluster-internal network and a firewall/router&lt;/li&gt;
+&lt;li&gt;Hating the idea of an external USB dongle on one RPi&lt;/li&gt;
+&lt;li&gt;Initially considered the more expensive &lt;a href=&#34;http://shop.8devices.com/carambola2-bundle&#34;&gt;Carambola 2&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;parts-already-owned:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Parts already owned&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ATX Power cables, various styles with various molex sockets
+
+&lt;ul&gt;
+&lt;li&gt;Hoard hoard; when some PSUs gave up the smoke, I took a pliers and snipidy snip the cables - finally it might pay off!&lt;/li&gt;
+&lt;li&gt;6-pin PCIe molex sockets seems to fit to the modular Corsair&amp;rsquo;s outlets&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zemm.github.io/katiska/img/00/atx_cables.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/atx_cables_thumb.jpg&#34; alt=&#34;scrap cables&#34; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.adafruit.com/products/1601&#34;&gt;Adafruit PiTFT 320x240 2.8&amp;rdquo; TFT+Touchscreen&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Have had this for 2 years without any use&lt;/li&gt;
+&lt;li&gt;Let&amp;rsquo;s create a mega-super hyper-interactive dashboard 3000 2.0!
+
+&lt;ul&gt;
+&lt;li&gt;Expected results: mind-bogglingly beautiful colors and subtle yet powerful transitions penetrating your vision-organs, creating a long lasting comfortable and fluffy happy-space inside your soul, and leaving you in a total awe of the marvelous times we&amp;rsquo;re living&lt;/li&gt;
+&lt;li&gt;Actual results: propably a few crappy gray buttons (did I say I was an engineer?&amp;hellip;)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zemm.github.io/katiska/img/00/tft.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/tft_thumb.jpg&#34; alt=&#34;adafruit tft&#34; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/products/model-b-plus/&#34;&gt;Raspberry Pi 1 Model B+&lt;/a&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Power/TFT-Dashboard controller&lt;/li&gt;
+&lt;li&gt;Have had this laying around without any use&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zemm.github.io/katiska/img/00/deskstuff.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/deskstuff_thumb.jpg&#34; alt=&#34;getting to know the pi&#34; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Random 2.5&amp;rdquo; HDDs
+
+&lt;ul&gt;
+&lt;li&gt;Not sure if these well be ever used, low priority&lt;/li&gt;
+&lt;li&gt;Although the idea of a &lt;a href=&#34;http://ceph.com/&#34;&gt;Ceph&lt;/a&gt; cluster is intriguing!&lt;/li&gt;
+&lt;li&gt;Would neet USB-SATA -adapters&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;parts-todo:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Parts @TODO&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;http://www.biltema.fi/fi/Rakentaminen/Muut/Muovilasi-2000030030/&#34;&gt;Acrylic Sheets&lt;/a&gt; for the case&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Because what else - there are LEDs and stuff at the boards!&lt;/li&gt;
+&lt;li&gt;Will not create nasty skin-penetrating chips when operated&lt;/li&gt;
+&lt;li&gt;Better for a show off if result is success (if not, &lt;del&gt;Photoshop&lt;/del&gt; &lt;del&gt;Gimp&lt;/del&gt; &lt;del&gt;lie&lt;/del&gt; never publish)&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+
+&lt;li&gt;&lt;p&gt;Cheap (free) old 16-24 port 10/100M switch to replace the 8-port&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;If one happened to appear while building&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&#34;initial-building-plans:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Initial building plans&lt;/h2&gt;
+
+&lt;p&gt;I haven&amp;rsquo;t done any real planning outside my head (yet). Mostly because I really haven&amp;rsquo;t used any CAD-like software before, and being a depth-first -minded person who gets stuck to the n:th subtask even with the simplest of distractions, I couldn&amp;rsquo;t get past the &amp;ldquo;what design softare to learn&amp;rdquo; -stage in the first week.&lt;/p&gt;
+
+&lt;h3 id=&#34;casing:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Casing&lt;/h3&gt;
+
+&lt;p&gt;The case will be build mostly from acrylic sheets. I don&amp;rsquo;t have access to laser cutters or 3d-printers, but I actually like crafting stuff with hands. Not that I&amp;rsquo;m good at it or even patient&amp;hellip; I have only a rough plan of the layout of the things:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;+---------------------+  Side view of the case
+| optional HDDs       |
++----------+----------+
+| RPi 1    | ATX      |  @TODO:
+| RPi 2    |          |    - router location
+| .....    |          |    - dashboard location
+| RPi n    |          |
++----------+----------+
+| Ethernet Switch     |
++---------------------+
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;The building will be mostly done by arranging stuff with eye, measuring and rounding the measurements to nicely looking numbers. The boards will propably be between two vertical acrylic sheets that have rails routed to them. The case will propably not have full coverage of side panels because of a better ventilation and access.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;ll leave the rest of the subject for some actual building with pictures.&lt;/p&gt;
+
+&lt;h3 id=&#34;power:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Power&lt;/h3&gt;
+
+&lt;p&gt;My current plan is to power the RPi 2:s from the 5-volt rail(s?) of the PSU (rated for 110W). One RPi 2 &lt;a href=&#34;https://en.wikipedia.org/wiki/Raspberry_Pi&#34;&gt;could draw around 4W&lt;/a&gt; with 24W for 6, so even with the losses etc I assume (without better knowledge) that it&amp;rsquo;ll suffice for now. If not, there&amp;rsquo;s the &lt;a href=&#34;http://likemagicappears.com/projects/raspberry-pi-cluster/power-cards/&#34;&gt;12V rail + converters&lt;/a&gt; -route.&lt;/p&gt;
+
+&lt;p&gt;The switch will be powered from the 12V rail (384W), so there will hopefully be only one power cord to the system. The oddball RPi 1 with the TFT will be powered from the VSB 5v, which is always supplying the power.&lt;/p&gt;
+
+&lt;p&gt;I&amp;rsquo;m planning to power the RPis via their USB ports, &lt;a href=&#34;http://raspberrypi.stackexchange.com/a/1618&#34;&gt;since it seems to be a better way than via the GPIO pins&lt;/a&gt;. For this I will solder a bunch of 6-pin Molex &amp;lt;-&amp;gt; Micro USB -cables to be attached straight to the PSU. I&amp;rsquo;ll blindly assume the 5V from the PSU will be &lt;a href=&#34;http://www.apolonio.com/node/44&#34;&gt;at least 5V&lt;/a&gt; and on par with cheap usb wall sockets.&lt;/p&gt;
+
+&lt;h3 id=&#34;power-management:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Power management&lt;/h3&gt;
+
+&lt;p&gt;The previous experiences have shown that the RPi:s tend to corrupt their memory cards very easily if not powered off properly. Therefore the turning on and off the cluster will be one of the first priorities.&lt;/p&gt;
+
+&lt;p&gt;Current solution is to power one RPi (v1, the one with the TFT) from the always-on VSB of the PSU. This host will then be &lt;a href=&#34;http://www.instructables.com/id/Using-the-Raspberry-Pi-to-control-an-ATX-power-sup/&#34;&gt;connected to the PS-ON -pin&lt;/a&gt; with a couple of resistors and a transistor to allow the RPi to control the state of the PSU and hence the other devices.&lt;/p&gt;
+
+&lt;p&gt;Naturally blind shutdowns would lead to corruptions, so the RPi responsible for the PSU needs to also be able to command the others to clean shutdown, and also be able to observe the state of the process. This will propably be done with the help of Ansible. The startup/shutdown process is also planned to be visualize via the TFT-Dashboard.&lt;/p&gt;
+
+&lt;p&gt;This also makes the oddball-RPi a natural control-host for all Ansible tasks, but since it&amp;rsquo;ll also host other things such as the Dashboard, some short-term statistics etc, it remains to be seen if the older RPi v1 is up to the task.&lt;/p&gt;
+
+&lt;h3 id=&#34;software:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Software&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.archlinux.org/&#34;&gt;Arch&lt;/a&gt; for the RPi 2:s, because of the greater propability of readily available and fresh packages. My main choise atm would be &lt;a href=&#34;https://www.centos.org/&#34;&gt;CentOS&lt;/a&gt;, and even though I&amp;rsquo;ve never really used Arch, I prefer it&amp;rsquo;s official PRi images over currently missing CentOS ones.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.raspbian.org/&#34;&gt;Raspbian&lt;/a&gt; for the dash/power-controller, mainly because of the hassle-free TFT-drivers with touch support. I suspect most of the software work in the project will actually be with this host, but it remains to be seen.&lt;/p&gt;
+
+&lt;p&gt;As said before, the plan is to create a cluster-local network between the hosts, and use a dedicated router/firewall to provide a single WAN-endpoint for outside connection. This will avoid dependencies and provide isolation from the outside network, making the cluster movable to different places and networks.&lt;/p&gt;
+
+&lt;p&gt;The whole stack will initially be powered by custom code, Ansible and propably Mesos because it&amp;rsquo;s versatility and ability to run most of the alternatives on top of it. But more of that later.&lt;/p&gt;
+
+&lt;h3 id=&#34;postscript-not-the-page-description-language:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Postscript (not the page description language)&lt;/h3&gt;
+
+&lt;p&gt;Oh, and the name &lt;em&gt;Katiska&lt;/em&gt;; since &lt;em&gt;there are two hard things in&lt;/em&gt;&amp;hellip; well, you know, stuff needs to be named and It&amp;rsquo;s not easy. The countless hours lost in that problem space.&lt;/p&gt;
+
+&lt;p&gt;Normally I would go with generic uninsteresting scheme like &lt;code&gt;node01.mesos.domain.tld&lt;/code&gt;, &lt;code&gt;node02.mesos.domain.tld&lt;/code&gt;&amp;hellip; especially since cluster nodes &lt;strong&gt;should&lt;/strong&gt; be anonymous and disposable by nature, abstracted away from the eyes of the user. It&amp;rsquo;s the whole point!&lt;/p&gt;
+
+&lt;p&gt;But since this is a cute hobby project, I wanted to use traditional caring naming pattern here. Having skimmed through &lt;a href=&#34;http://namingschemes.com/&#34;&gt;some suggestions&lt;/a&gt;, I opted for Finnish fish names, and therefore Katiska aka. a Fish Trap (hacky steel wire thingy).&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
