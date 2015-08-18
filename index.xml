@@ -18,7 +18,7 @@
 
 &lt;h2 id=&#34;warning:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Warning&lt;/h2&gt;
 
-&lt;p&gt;&lt;strong&gt;This useless wall of text is really just to keep my focus on the project, and to document it for my later self (hi older me!). This is not a tutorial of any kind, It&amp;rsquo;s not meant to be useful, and the project will propably not even succeed. TL;DR is adviced.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This useless wall of text is really just to keep my focus on the project, and to document it for my later self (hi older me!). This is not a tutorial of any kind, It&amp;rsquo;s not meant to be useful, and the project will probably not even succeed. TL;DR is adviced.&lt;/strong&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;why-build-a-cluster:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Why build a cluster?&lt;/h2&gt;
 
@@ -125,7 +125,7 @@ include:&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Expected results: mind-bogglingly beautiful colors and subtle yet powerful transitions penetrating your vision-organs, creating a long lasting comfortable and fluffy happy-space inside your soul, and leaving you in a total awe of the marvelous times we&amp;rsquo;re living&lt;/li&gt;
-&lt;li&gt;Actual results: propably a few crappy gray buttons (did I say I was an engineer?&amp;hellip;)&lt;/li&gt;
+&lt;li&gt;Actual results: probably a few crappy gray buttons (did I say I was an engineer?&amp;hellip;)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
@@ -193,7 +193,7 @@ include:&lt;/p&gt;
 +---------------------+
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;The building will be mostly done by arranging stuff with eye, measuring and rounding the measurements to nicely looking numbers. The boards will propably be between two vertical acrylic sheets that have rails routed to them. The case will propably not have full coverage of side panels because of a better ventilation and access.&lt;/p&gt;
+&lt;p&gt;The building will be mostly done by arranging stuff with eye, measuring and rounding the measurements to nicely looking numbers. The boards will probably be between two vertical acrylic sheets that have rails routed to them. The case will probably not have full coverage of side panels because of a better ventilation and access.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;ll leave the rest of the subject for some actual building with pictures.&lt;/p&gt;
 
@@ -211,7 +211,7 @@ include:&lt;/p&gt;
 
 &lt;p&gt;Current solution is to power one RPi (v1, the one with the TFT) from the always-on VSB of the PSU. This host will then be &lt;a href=&#34;http://www.instructables.com/id/Using-the-Raspberry-Pi-to-control-an-ATX-power-sup/&#34;&gt;connected to the PS-ON -pin&lt;/a&gt; with a couple of resistors and a transistor to allow the RPi to control the state of the PSU and hence the other devices.&lt;/p&gt;
 
-&lt;p&gt;Naturally blind shutdowns would lead to corruptions, so the RPi responsible for the PSU needs to also be able to command the others to clean shutdown, and also be able to observe the state of the process. This will propably be done with the help of Ansible. The startup/shutdown process is also planned to be visualize via the TFT-Dashboard.&lt;/p&gt;
+&lt;p&gt;Naturally blind shutdowns would lead to corruptions, so the RPi responsible for the PSU needs to also be able to command the others to clean shutdown, and also be able to observe the state of the process. This will probably be done with the help of Ansible. The startup/shutdown process is also planned to be visualize via the TFT-Dashboard.&lt;/p&gt;
 
 &lt;p&gt;This also makes the oddball-RPi a natural control-host for all Ansible tasks, but since it&amp;rsquo;ll also host other things such as the Dashboard, some short-term statistics etc, it remains to be seen if the older RPi v1 is up to the task.&lt;/p&gt;
 
@@ -223,7 +223,7 @@ include:&lt;/p&gt;
 
 &lt;p&gt;As said before, the plan is to create a cluster-local network between the hosts, and use a dedicated router/firewall to provide a single WAN-endpoint for outside connection. This will avoid dependencies and provide isolation from the outside network, making the cluster movable to different places and networks.&lt;/p&gt;
 
-&lt;p&gt;The whole stack will initially be powered by custom code, Ansible and propably Mesos because it&amp;rsquo;s versatility and ability to run most of the alternatives on top of it. But more of that later.&lt;/p&gt;
+&lt;p&gt;The whole stack will initially be powered by custom code, Ansible and probably Mesos because of it&amp;rsquo;s versatility and ability to run most of the alternatives on top of it. But more of that later.&lt;/p&gt;
 
 &lt;h3 id=&#34;postscript-not-the-page-description-language:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Postscript (not the page description language)&lt;/h3&gt;
 

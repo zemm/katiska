@@ -47,7 +47,7 @@
         "headline": "(Ir)Rationale and blah blah blah",
         "datePublished": "2015-08-18",
         "description": "",
-        "wordCount":  1611 
+        "wordCount":  1612 
     }
     </script>
     
@@ -92,7 +92,7 @@
 
 <h2 id="warning:21017a74a3f7192ee3bdc015cae9bc9f">Warning</h2>
 
-<p><strong>This useless wall of text is really just to keep my focus on the project, and to document it for my later self (hi older me!). This is not a tutorial of any kind, It&rsquo;s not meant to be useful, and the project will propably not even succeed. TL;DR is adviced.</strong></p>
+<p><strong>This useless wall of text is really just to keep my focus on the project, and to document it for my later self (hi older me!). This is not a tutorial of any kind, It&rsquo;s not meant to be useful, and the project will probably not even succeed. TL;DR is adviced.</strong></p>
 
 <h2 id="why-build-a-cluster:21017a74a3f7192ee3bdc015cae9bc9f">Why build a cluster?</h2>
 
@@ -199,7 +199,7 @@ include:</p>
 
 <ul>
 <li>Expected results: mind-bogglingly beautiful colors and subtle yet powerful transitions penetrating your vision-organs, creating a long lasting comfortable and fluffy happy-space inside your soul, and leaving you in a total awe of the marvelous times we&rsquo;re living</li>
-<li>Actual results: propably a few crappy gray buttons (did I say I was an engineer?&hellip;)</li>
+<li>Actual results: probably a few crappy gray buttons (did I say I was an engineer?&hellip;)</li>
 </ul></li>
 </ul></li>
 </ul>
@@ -267,7 +267,7 @@ include:</p>
 +---------------------+
 </code></pre>
 
-<p>The building will be mostly done by arranging stuff with eye, measuring and rounding the measurements to nicely looking numbers. The boards will propably be between two vertical acrylic sheets that have rails routed to them. The case will propably not have full coverage of side panels because of a better ventilation and access.</p>
+<p>The building will be mostly done by arranging stuff with eye, measuring and rounding the measurements to nicely looking numbers. The boards will probably be between two vertical acrylic sheets that have rails routed to them. The case will probably not have full coverage of side panels because of a better ventilation and access.</p>
 
 <p>I&rsquo;ll leave the rest of the subject for some actual building with pictures.</p>
 
@@ -285,7 +285,7 @@ include:</p>
 
 <p>Current solution is to power one RPi (v1, the one with the TFT) from the always-on VSB of the PSU. This host will then be <a href="http://www.instructables.com/id/Using-the-Raspberry-Pi-to-control-an-ATX-power-sup/">connected to the PS-ON -pin</a> with a couple of resistors and a transistor to allow the RPi to control the state of the PSU and hence the other devices.</p>
 
-<p>Naturally blind shutdowns would lead to corruptions, so the RPi responsible for the PSU needs to also be able to command the others to clean shutdown, and also be able to observe the state of the process. This will propably be done with the help of Ansible. The startup/shutdown process is also planned to be visualize via the TFT-Dashboard.</p>
+<p>Naturally blind shutdowns would lead to corruptions, so the RPi responsible for the PSU needs to also be able to command the others to clean shutdown, and also be able to observe the state of the process. This will probably be done with the help of Ansible. The startup/shutdown process is also planned to be visualize via the TFT-Dashboard.</p>
 
 <p>This also makes the oddball-RPi a natural control-host for all Ansible tasks, but since it&rsquo;ll also host other things such as the Dashboard, some short-term statistics etc, it remains to be seen if the older RPi v1 is up to the task.</p>
 
@@ -297,7 +297,7 @@ include:</p>
 
 <p>As said before, the plan is to create a cluster-local network between the hosts, and use a dedicated router/firewall to provide a single WAN-endpoint for outside connection. This will avoid dependencies and provide isolation from the outside network, making the cluster movable to different places and networks.</p>
 
-<p>The whole stack will initially be powered by custom code, Ansible and propably Mesos because it&rsquo;s versatility and ability to run most of the alternatives on top of it. But more of that later.</p>
+<p>The whole stack will initially be powered by custom code, Ansible and probably Mesos because of it&rsquo;s versatility and ability to run most of the alternatives on top of it. But more of that later.</p>
 
 <h3 id="postscript-not-the-page-description-language:21017a74a3f7192ee3bdc015cae9bc9f">Postscript (not the page description language)</h3>
 
