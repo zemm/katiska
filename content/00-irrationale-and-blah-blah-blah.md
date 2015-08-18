@@ -35,21 +35,20 @@ Most of the stuff will be planned as I go. This will lead to failures and unnece
 
 ### Parts ordered
 
-At the time of writing, I've ordered an initial bunch of stuff
-that I have carefully (not) calculated to be needed. Such items
-include:
+At the time of writing, I've ordered an initial bunch of stuff that I have carefully (not) calculated to be needed. Such items include:
 
 * **6x** [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)
   * The more the merrier, when the intention is to play with failovers, balancing and HA-stuff
-  * Non-masterless setups take 1 to 3 nodes just to control the cluster, which leaves just the bare minimum of 3 slaves
-  * Six was the most I really dared without a real need as a justification
-  * For the initial plan I had just an 8-port switch
+  * Non-masterless setups take 1 to 3 nodes just for the masters, which leaves the bare minimum of 3 slaves
+  * Six was the most I really dared without a better justification
+  * 8-port switch limits
   * Will keep the possible future expansion in mind when building
 
 * **6x** [Samsung MicroSDHC 16GB PRO](http://www.samsung.com/us/computer/memory-storage-accessories/MB-MG16DA/AM)
 
 * [Corsair CX Series™ Modular CX430M ATX Power Supply](http://www.corsair.com/en/cx-series-cx430m-modular-atx-power-supply-430-watt-80-plus-bronze-certified-modular-psu)
-  * Modularity was desired, planning to build my own cables straight from the source without adapters
+  * Modularity was desired
+  * Planning on building custom cables without destroying the stock ones
 
 * **15x** 50cm Cat5e (red, orange, purple) cables
   * Couldn't find a full rainbow suite of cables at a reasonable price :(, so I opted for a somewhat coherent color pattern (at least tried)
@@ -87,13 +86,15 @@ include:
       * Actual results: probably a few crappy gray buttons (did I say I was an engineer?...)
 
 * [Raspberry Pi 1 Model B+](https://www.raspberrypi.org/products/model-b-plus/)
-  * Power/TFT-Dashboard controller
+  * Power management, TFT-Dashboard
   * Have had this laying around without any use
 
 * Random 2.5" HDDs
-  * Not sure if these well be ever used, low priority
+  * Not sure if these well ever be used, low priority
   * Although the idea of a [Ceph](http://ceph.com/) cluster is intriguing!
-  * Would neet USB-SATA -adapters
+  * Would need USB-SATA -adapters
+
+* Zyxel 8-port gigabit switch
 
 [![scrap cables](/img/00/atx_cables_thumb.jpg)](/img/00/atx_cables.jpg)
 [![adafruit tft](/img/00/tft_thumb.jpg)](/img/00/tft.jpg)
