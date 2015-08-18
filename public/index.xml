@@ -64,12 +64,7 @@ include:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Modularity was desired, planning to build my own cables straight from the source without adapters&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://zemm.github.io/katiska/img/00/rpi2s.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/rpi2s_thumb.jpg&#34; alt=&#34;rpi2s&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
 &lt;li&gt;&lt;p&gt;&lt;strong&gt;15x&lt;/strong&gt; 50cm Cat5e (red, orange, purple) cables&lt;/p&gt;
 
 &lt;ul&gt;
@@ -102,22 +97,20 @@ include:&lt;/p&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;p&gt;&lt;a href=&#34;https://zemm.github.io/katiska/img/00/rpi2s.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/rpi2s_thumb.jpg&#34; alt=&#34;rpi2s&#34; /&gt;
+&lt;/a&gt;&lt;/p&gt;
+
 &lt;h3 id=&#34;parts-already-owned:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Parts already owned&lt;/h3&gt;
 
 &lt;ul&gt;
-&lt;li&gt;ATX Power cables, various styles with various molex sockets
+&lt;li&gt;&lt;p&gt;ATX Power cables, various styles with various molex sockets&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Hoard hoard; when some PSUs gave up the smoke, I took a pliers and snipidy snip the cables - finally it might pay off!&lt;/li&gt;
 &lt;li&gt;6-pin PCIe molex sockets seems to fit to the modular Corsair&amp;rsquo;s outlets&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://zemm.github.io/katiska/img/00/atx_cables.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/atx_cables_thumb.jpg&#34; alt=&#34;scrap cables&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.adafruit.com/products/1601&#34;&gt;Adafruit PiTFT 320x240 2.8&amp;rdquo; TFT+Touchscreen&lt;/a&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.adafruit.com/products/1601&#34;&gt;Adafruit PiTFT 320x240 2.8&amp;rdquo; TFT+Touchscreen&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Have had this for 2 years without any use&lt;/li&gt;
@@ -128,25 +121,15 @@ include:&lt;/p&gt;
 &lt;li&gt;Actual results: probably a few crappy gray buttons (did I say I was an engineer?&amp;hellip;)&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://zemm.github.io/katiska/img/00/tft.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/tft_thumb.jpg&#34; alt=&#34;adafruit tft&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&#34;https://www.raspberrypi.org/products/model-b-plus/&#34;&gt;Raspberry Pi 1 Model B+&lt;/a&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href=&#34;https://www.raspberrypi.org/products/model-b-plus/&#34;&gt;Raspberry Pi 1 Model B+&lt;/a&gt;&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Power/TFT-Dashboard controller&lt;/li&gt;
 &lt;li&gt;Have had this laying around without any use&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://zemm.github.io/katiska/img/00/deskstuff.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/deskstuff_thumb.jpg&#34; alt=&#34;getting to know the pi&#34; /&gt;
-&lt;/a&gt;&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Random 2.5&amp;rdquo; HDDs
+&lt;li&gt;&lt;p&gt;Random 2.5&amp;rdquo; HDDs&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;Not sure if these well be ever used, low priority&lt;/li&gt;
@@ -154,6 +137,13 @@ include:&lt;/p&gt;
 &lt;li&gt;Would neet USB-SATA -adapters&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://zemm.github.io/katiska/img/00/atx_cables.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/atx_cables_thumb.jpg&#34; alt=&#34;scrap cables&#34; /&gt;
+&lt;/a&gt;
+&lt;a href=&#34;https://zemm.github.io/katiska/img/00/tft.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/tft_thumb.jpg&#34; alt=&#34;adafruit tft&#34; /&gt;
+&lt;/a&gt;
+&lt;a href=&#34;https://zemm.github.io/katiska/img/00/deskstuff.jpg&#34;&gt;&lt;img src=&#34;https://zemm.github.io/katiska/img/00/deskstuff_thumb.jpg&#34; alt=&#34;getting to know the pi&#34; /&gt;
+&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&#34;parts-todo:21017a74a3f7192ee3bdc015cae9bc9f&#34;&gt;Parts @TODO&lt;/h3&gt;
 
