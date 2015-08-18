@@ -1,0 +1,6 @@
+<h6><a href="https://github.com/zemm">Who</a></h6>
+<hr />
+
+{{ range .Site.Pages }}
+<h6><a href="{{ .Permalink }}">{{ .Title }}</a></h6>
+{{ end }}

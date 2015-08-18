@@ -1,0 +1,11 @@
+---
+contentdir: "content"
+layoutdir: "layouts"
+publishdir: "public"
+metaDataFormat: yaml
+indexes:
+  category: "categories"
+baseurl: "https://zemm.github.io/katiska"
+title: "Yet Another DIY Raspberry Pi Cluster"
+canonifyurls: true
+editor: "subl"

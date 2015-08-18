@@ -1,0 +1,13 @@
+<div class="next-prev">
+	{{if .Next}}
+		<a class="article-next" href="{{ .Next.Permalink }}">
+			{{.Next.Title}}
+		</a>
+	{{end}}
+
+	{{if .Prev}}
+		<a class="article-next" href="{{ .Prev.Permalink }}">
+			{{.Prev.Title}}
+		</a>
+	{{end}}
+</div>
