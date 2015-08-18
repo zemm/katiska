@@ -8,7 +8,7 @@ tags:
 
 ## Warning
 
-**This useless wall of text is really just to keep my focus on the project, and to document it for my later self (hi older me!). This is not a tutorial of any kind, It's not meant to be useful, and the project will propably not even succeed. TL;DR is adviced.**
+**This useless wall of text is really just to keep my focus on the project, and to document it for my later self (hi older me!). This is not a tutorial of any kind, It's not meant to be useful, and the project will probably not even succeed. TL;DR is adviced.**
 
 
 ## Why build a cluster?
@@ -82,7 +82,7 @@ include:
   * Have had this for 2 years without any use
   * Let's create a mega-super hyper-interactive dashboard 3000 2.0!
       * Expected results: mind-bogglingly beautiful colors and subtle yet powerful transitions penetrating your vision-organs, creating a long lasting comfortable and fluffy happy-space inside your soul, and leaving you in a total awe of the marvelous times we're living
-      * Actual results: propably a few crappy gray buttons (did I say I was an engineer?...)
+      * Actual results: probably a few crappy gray buttons (did I say I was an engineer?...)
 
 [![adafruit tft](/img/00/tft_thumb.jpg)](/img/00/tft.jpg)
 
@@ -128,7 +128,7 @@ The case will be build mostly from acrylic sheets. I don't have access to laser 
     | Ethernet Switch     |
     +---------------------+
 
-The building will be mostly done by arranging stuff with eye, measuring and rounding the measurements to nicely looking numbers. The boards will propably be between two vertical acrylic sheets that have rails routed to them. The case will propably not have full coverage of side panels because of a better ventilation and access.
+The building will be mostly done by arranging stuff with eye, measuring and rounding the measurements to nicely looking numbers. The boards will probably be between two vertical acrylic sheets that have rails routed to them. The case will probably not have full coverage of side panels because of a better ventilation and access.
 
 I'll leave the rest of the subject for some actual building with pictures.
 
@@ -147,7 +147,7 @@ The previous experiences have shown that the RPi:s tend to corrupt their memory 
 
 Current solution is to power one RPi (v1, the one with the TFT) from the always-on VSB of the PSU. This host will then be [connected to the PS-ON -pin](http://www.instructables.com/id/Using-the-Raspberry-Pi-to-control-an-ATX-power-sup/) with a couple of resistors and a transistor to allow the RPi to control the state of the PSU and hence the other devices.
 
-Naturally blind shutdowns would lead to corruptions, so the RPi responsible for the PSU needs to also be able to command the others to clean shutdown, and also be able to observe the state of the process. This will propably be done with the help of Ansible. The startup/shutdown process is also planned to be visualize via the TFT-Dashboard.
+Naturally blind shutdowns would lead to corruptions, so the RPi responsible for the PSU needs to also be able to command the others to clean shutdown, and also be able to observe the state of the process. This will probably be done with the help of Ansible. The startup/shutdown process is also planned to be visualize via the TFT-Dashboard.
 
 This also makes the oddball-RPi a natural control-host for all Ansible tasks, but since it'll also host other things such as the Dashboard, some short-term statistics etc, it remains to be seen if the older RPi v1 is up to the task.
 
@@ -160,7 +160,7 @@ This also makes the oddball-RPi a natural control-host for all Ansible tasks, bu
 
 As said before, the plan is to create a cluster-local network between the hosts, and use a dedicated router/firewall to provide a single WAN-endpoint for outside connection. This will avoid dependencies and provide isolation from the outside network, making the cluster movable to different places and networks.
 
-The whole stack will initially be powered by custom code, Ansible and propably Mesos because it's versatility and ability to run most of the alternatives on top of it. But more of that later.
+The whole stack will initially be powered by custom code, Ansible and probably Mesos because of it's versatility and ability to run most of the alternatives on top of it. But more of that later.
 
 
 ### Postscript (not the page description language)
